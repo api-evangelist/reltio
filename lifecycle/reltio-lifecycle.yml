@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reltio.com/en/whats-new/release-notes
+versioning:
+  scheme: release-train
+  detail: >-
+    Reltio delivers the Context Intelligence Platform as a continuously updated
+    SaaS; platform changes ship on a regular release cadence documented in the
+    release notes rather than as URL-versioned API endpoints.
+  docs: https://docs.reltio.com/en/whats-new/release-notes
+release_notes: https://docs.reltio.com/en/whats-new/release-notes
+status_page: https://status.reltio.com/
+sla:
+  detail: >-
+    Reltio Lightspeed Data Delivery Network advertises sub-50ms data access;
+    contractual uptime/SLA terms are governed by the customer SaaS Subscription
+    Agreement.
+deprecated_operations: []

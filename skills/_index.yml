@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: generated
+source: https://github.com/reltio-ai/reltio-mcp-server
+grounding: >-
+  Steps are grounded in real, verified tool names exposed by the Reltio MCP
+  Server (Developer Edition) and the AgentFlow MCP Server. No public OpenAPI is
+  available, so operations reference MCP tool names rather than OpenAPI
+  operationIds.
+skills:
+- file: reltio-resolve-and-merge-duplicates.md
+  name: Resolve and merge duplicate entities
+  api: mcp/reltio-mcp.yml
+  operations: [find_potential_matches_tool, get_entity_with_matches_tool, merge_entities_tool, reject_entity_match_tool, get_entity_match_history_tool]
+- file: reltio-create-and-enrich-entity.md
+  name: Create and enrich an entity profile
+  api: mcp/reltio-mcp.yml
+  operations: [create_entity_tool, get_entity_tool, update_entity_attributes_tool, create_relationships_tool, get_entity_graph_tool]
+- file: reltio-steward-workflow-tasks.md
+  name: Work a data-stewardship task queue
+  api: mcp/reltio-mcp.yml
+  operations: [retrieve_tasks_tool, get_task_details_tool, reassign_workflow_task_tool, execute_task_action_tool, start_process_instance_tool]

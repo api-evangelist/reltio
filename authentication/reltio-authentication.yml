@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reltio.com/en/developer-resources
+docs: https://docs.reltio.com/en/developer-resources
+notes: >-
+  No public OpenAPI is available for the Reltio REST API (tenant-scoped,
+  auth-gated), so this profile is searched from the developer docs and the
+  live OAuth authorization-server discovery document rather than derived.
+summary:
+  types: [oauth2]
+  api_key_in: []
+  oauth2_flows: [password, clientCredentials, authorizationCode]
+schemes:
+- name: ReltioOAuth2
+  type: oauth2
+  description: >-
+    Reltio REST APIs are authorized with OAuth 2.0 bearer access tokens.
+    Tokens are obtained from the Reltio auth service; the token is passed as
+    an Authorization: Bearer <access_token> header on every API request.
+  token_endpoint: https://auth.reltio.com/oauth/token
+  flows:
+  - flow: password
+    description: Resource-owner password grant (username/password) — common for user-context REST access
+  - flow: clientCredentials
+    description: Client credentials grant — used by the open-source MCP Server (Developer Edition) and server-to-server integrations
+- name: ReltioAIToolsOAuth2
+  type: oauth2
+  description: >-
+    OAuth 2.0 server fronting the Reltio AgentFlow MCP / AI Tools surface, with
+    OpenID-style dynamic client registration and PKCE.
+  source: dev.reltio.com/.well-known/oauth-authorization-server
+  issuer: https://dev.reltio.com/ai/tools
+  authorization_endpoint: https://login.reltio.com
+  token_endpoint: https://login.reltio.com/token
+  registration_endpoint: https://dev.reltio.com/ai/tools/register
+  flows:
+  - flow: authorizationCode
+    description: Authorization code with PKCE (S256); client_secret_basic token auth

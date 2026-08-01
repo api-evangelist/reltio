@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.reltio.com/trust/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: REST APIs and AgentFlow MCP server authorize with OAuth 2.0 bearer tokens
+- id: oauth2-pkce
+  conforms: true
+  evidence: AI Tools OAuth server advertises code_challenge_methods_supported [S256]
+- id: mcp
+  conforms: true
+  evidence: Reltio AgentFlow MCP Server + open-source Reltio MCP Server (Model Context Protocol)
+- id: iso-27001
+  conforms: true
+  evidence: Reltio security program certified/aligned to ISO 27001 (trust center)
+- id: hitrust-csf
+  conforms: true
+  evidence: Reltio security program follows HITRUST CSF (trust center)
+- id: nist-800-53
+  conforms: true
+  evidence: Reltio security program follows NIST 800-53 (trust center)
+- id: gdpr
+  conforms: true
+  evidence: GDPR data-processing posture documented via Reltio trust center
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Reltio REST errors are JSON but not application/problem+json

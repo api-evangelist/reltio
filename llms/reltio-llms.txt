@@ -1,0 +1,172 @@
+# Reltio
+
+> Reltio is a cloud-native, AI-native master data management (MDM) platform that unifies, cleanses, harmonizes, governs, and activates enterprise data from multiple sources in real time. As of May 7, 2026, Reltio is now part of SAP SE and is being integrated into SAP Business Data Cloud (SAP BDC). The Reltio portfolio remains available as a standalone offering.
+
+Reltio was founded in 2011 by Manish Sood (Founder, Chairman, and CEO), who previously helped develop the world's first MDM platform at Informatica. The company is headquartered at 100 Marine Parkway, Redwood Shores, CA 94065. Annual revenue exceeds $185 million. Reltio serves 15 of the Fortune 100 and enterprise customers across 140+ countries.
+
+## What Reltio Does
+
+Reltio's Context Intelligence Platform enriches siloed enterprise data into a dynamic semantic model — a graph-based representation of unified profiles, real-time interactions, and cross-domain relationships — to power intelligent operations, analytics, and agentic AI transformation. The platform delivers trusted "golden records" that operational systems and AI agents can consume with confidence.
+
+Core capabilities:
+- **Multidomain MDM**: Unify customer, product, supplier, HCP, and other data domains in a single platform
+- **Entity Resolution**: LLM-driven and rule-based matching (branded FERN) produces the most accurate AI-ready golden records; pretrained models reduce setup time
+- **Intelligent 360**: Context-rich 360° views of any entity (customer, product, supplier) as reusable data assets
+- **AgentFlow**: Prebuilt AI agents that automate data stewardship, governance, and business workflows; claims 10x productivity gains
+- **Data Quality**: Continuous curation, monitoring, and cleansing of core data; embedded rules and AI automation
+- **Data Integration**: Low-code/no-code ingestion and activation with 1,000+ prebuilt connectors; compatible with AWS, Azure, and Google Cloud
+- **Reltio Lightspeed™ Data Delivery Network**: ≤50 ms latency data access for global real-time use cases
+
+## Products & Offerings
+
+### Reltio Context Intelligence Platform
+The umbrella platform. Enriches enterprise data into a dynamic semantic model. Supports operational workflows, analytical workloads, and agentic AI. Multi-cloud (AWS, Azure, GCP).
+
+**URL**: https://www.reltio.com/context-intelligence-platform/
+
+### Reltio Data Cloud®
+The data unification and activation engine. Transforms siloed, multidomain data into graph-based profiles with real-time interactions. Powers connected 360° views.
+
+**URL**: https://www.reltio.com/data-cloud/
+
+### Intelligent 360
+Trusted, reusable 360° profile views for customers, products, suppliers, and more. Designed to future-proof enterprise data architecture.
+
+**URL**: https://www.reltio.com/products/intelligent-360/
+
+### Multidomain MDM
+AI-powered automation to turn siloed core data into governed, high-quality data across multiple domains simultaneously.
+
+**URL**: https://www.reltio.com/products/multidomain-mdm/
+
+### AgentFlow
+Prebuilt AI agent suite for intelligent automation of data stewardship and governance workflows. Built on the Reltio Data Cloud, runs on AWS, Azure, and GCP.
+
+**URL**: https://www.reltio.com/products/agentflow/
+
+### Entity Resolution
+Pretrained, LLM-augmented matching models (FERN) for accurate deduplication and golden record creation across sources.
+
+**URL**: https://www.reltio.com/products/entity-resolution/
+
+### Data Quality
+Continuous AI-powered data monitoring, cleansing, validation, and enrichment. Embeds governance into the data pipeline.
+
+**URL**: https://www.reltio.com/products/data-quality/
+
+### Data Integration
+Ingestion, enrichment, and activation across disparate sources via low-code/no-code tooling and 1,000+ prebuilt connectors.
+
+**URL**: https://www.reltio.com/products/data-integration/
+
+## SAP Acquisition (2026)
+
+SAP SE agreed to acquire Reltio on March 27, 2026, and completed the acquisition on May 7, 2026. Reltio is being integrated into SAP Business Data Cloud (SAP BDC) as a core MDM capability. The integration is intended to make both SAP and non-SAP enterprise data AI-ready. Commercial flexibility: Reltio is available standalone or bundled with SAP products.
+
+**Announcement**: https://www.reltio.com/resources/press-releases/reltio-sap-announcement/
+
+## Industries Served
+
+- Life Sciences (Pfizer, AbbVie, AstraZeneca, Takeda)
+- Healthcare (Fairview Health)
+- Financial Services (PennyMac, Empire Life)
+- Insurance
+- Retail (CarMax, L'Oréal)
+- Manufacturing
+- High Tech (HP, Inc.)
+- Travel & Hospitality (MGM Resorts International)
+- Consumer Packaged Goods
+
+**URL**: https://www.reltio.com/solutions/industries/
+
+## Key Use Cases
+
+- **Agentic AI Transformation**: Provide AI agents with governed, context-rich enterprise data via real-time APIs. Agents can act autonomously on trusted data.
+- **Customer 360**: Unify customer profiles across CRM, ERP, e-commerce, and other sources into a single authoritative record.
+- **HCP/HCO 360 (Life Sciences)**: Unified healthcare professional and organization profiles for compliant, effective engagement.
+- **Supplier & Product MDM**: Multidomain unification of supply chain and product catalog data.
+- **Data Modernization / Cloud Migration**: Replace legacy on-premise MDM with cloud-native architecture.
+- **Regulatory Compliance**: GDPR, CCPA, and data privacy governance embedded in the platform.
+- **Digital Transformation**: Connecting fragmented systems into an enterprise-wide trusted data foundation.
+
+**URL**: https://www.reltio.com/data-intel-ai/
+
+## Competitive Positioning
+
+Reltio is a recognized leader in cloud-native MDM. Forrester has placed Reltio as a top leader in its Master Data Management Wave reports, citing its machine learning, knowledge graph, graph database architecture, and embedded analytics as differentiating factors. Primary differentiators over legacy MDM (Informatica, IBM, Oracle, SAP MDG):
+- Born-in-cloud SaaS (no infrastructure management)
+- Real-time data unification and activation (not batch)
+- LLM-native entity resolution (FERN)
+- Multidomain in a single platform (not domain-specific silos)
+- Agentic AI readiness out of the box
+
+## Technology & Architecture
+
+- Cloud-native SaaS (multi-cloud: AWS, Azure, GCP)
+- Graph database backbone for entity relationships
+- REST APIs (API-first design); developer portal at developer.reltio.com
+- LLM-powered entity resolution (FERN model)
+- Pre-built velocity packs for Life Sciences, Healthcare, Financial Services, and Insurance (accelerate deployment to weeks vs. years)
+- GKE, BigTable, BigQuery, Datastore, Dataproc, Dataflow, GCS, Pub/Sub (Google Cloud stack)
+- Reltio Lightspeed™ DDN: ≤50 ms global data delivery latency
+
+## Trust & Security
+
+Reltio embeds compliance, privacy, and security governance directly into the platform. Supports GDPR, CCPA, and enterprise data residency requirements.
+
+**Trust Center**: https://www.reltio.com/trust/
+
+## Company
+
+- **Founded**: 2011
+- **Founder & CEO**: Manish Sood
+- **HQ**: Redwood Shores, CA
+- **Parent (as of May 2026)**: SAP SE
+- **Revenue**: $185M+ ARR
+- **Customers**: 15 of Fortune 100; 140+ countries
+- **Twitter**: @Reltio
+
+## Resources & Support
+
+| Resource | URL |
+|---|---|
+| Homepage | https://www.reltio.com/ |
+| Platform overview | https://www.reltio.com/context-intelligence-platform/ |
+| Documentation | https://docs.reltio.com/ |
+| Developer portal | https://developer.reltio.com/ |
+| Learning portal | https://learn.reltio.com/ |
+| Community | https://community.reltio.com/home |
+| Support | https://support.reltio.com/hc/en-us |
+| Trust Center | https://www.reltio.com/trust/ |
+| Customers / Case studies | https://www.reltio.com/customers/ |
+| Resource library | https://www.reltio.com/resources/ |
+| Blog | https://www.reltio.com/resources/?_resource_types=blog |
+| Newsroom | https://www.reltio.com/newsroom/ |
+| Request a demo | https://www.reltio.com/request-a-demo/ |
+| Partners | https://www.reltio.com/partners/ |
+| Glossary (MDM / data terms) | https://www.reltio.com/glossary/ |
+| Platform demo series | https://www.reltio.com/platform-demo-series/ |
+| SAP acquisition announcement | https://www.reltio.com/resources/press-releases/reltio-sap-announcement/ |
+
+## Partner Ecosystem
+
+Reltio integrates with and is supported by a broad partner ecosystem including cloud platforms (AWS, Google Cloud, Azure), technology partners (Salesforce, MuleSoft, Talend), data enrichment providers (Dun & Bradstreet, IQVIA), and implementation partners (Accenture, Deloitte).
+
+**URL**: https://www.reltio.com/partners/
+
+## Personas & Audiences
+
+- **Business Leaders / CDOs / CMOs**: Seeking to escape "data chaos" and enable real-time, AI-driven decision-making
+- **Technology Leaders / CTOs / CIOs / Data Architects**: Building cloud-native, API-first, agentic data infrastructure
+- **Data Stewards**: Using AgentFlow for automated stewardship workflows
+- **SAP Customers**: Evaluating Reltio as the MDM layer within SAP Business Data Cloud
+- **Non-SAP customers**: Available as a standalone platform with a flexible commercial model
+
+## Frequently Asked / Agentic Query Notes
+
+- Reltio is **not** a BI or analytics tool — it is a data foundation/MDM platform
+- Reltio does **not** store raw transactional data — it creates unified master records (golden records)
+- Reltio's primary output is trusted, governed, real-time entity profiles consumable by downstream applications and AI agents
+- The FERN model is Reltio's LLM-augmented entity resolution engine, distinct from pure rules-based MDM matching
+- "Intelligent 360" and "Connected Customer 360" refer to the same category of capability — unified entity profiles — though Connected Customer 360 is an older product name
+- As of May 2026, Reltio is a wholly owned subsidiary of SAP SE; existing standalone customer agreements remain in effect

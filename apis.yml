@@ -1,9 +1,29 @@
 aid: reltio
 name: Reltio
-description: 'Reltio is a company surfaced as a portfolio company of sapphire-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: data-analytics. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Reltio is a cloud-native, AI-native master data management (MDM) and Context
+  Intelligence Platform that unifies, cleanses, harmonizes, governs, and
+  activates enterprise data from many sources in real time. It delivers trusted
+  "golden records" via multidomain MDM, LLM-driven entity resolution, data
+  quality, and data integration (1,000+ connectors), and exposes that governed
+  data to AI agents through AgentFlow and a Model Context Protocol (MCP) server.
+  Founded in 2011 and headquartered in Redwood Shores, CA, Reltio became part of
+  SAP SE in May 2026 and is being integrated into SAP Business Data Cloud while
+  remaining available standalone.
 url: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/3045483?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +32,36 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Data Analytics
-apis: []
+- Master Data Management
+- MDM
+- Entity Resolution
+- Data Quality
+- Data Integration
+- AI Agents
+- MCP
+- SAP
+apis:
+- name: Reltio Context Intelligence Platform REST API
+  description: >-
+    Tenant-scoped REST API for the Reltio Context Intelligence Platform:
+    entities, relations, interactions, reference data, load/export, data
+    integration, workflow, hierarchy, statistics, and validation. OAuth 2.0
+    bearer authorization; environment-scoped host with tenant id in the path.
+  humanURL: https://docs.reltio.com/en/developer-resources
+  baseURL: https://dev.reltio.com/reltio/api
+  tags:
+  - Master Data Management
+  - Entity Resolution
+  - Data Integration
+  properties:
+  - type: Documentation
+    url: https://docs.reltio.com/en/developer-resources
+  - type: Authentication
+    url: authentication/reltio-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +70,67 @@ maintainers:
 common:
 - type: Website
   url: https://www.reltio.com/
+- type: DeveloperPortal
+  url: https://docs.reltio.com/
+- type: Documentation
+  url: https://docs.reltio.com/
+- type: APIReference
+  url: https://docs.reltio.com/en/developer-resources
+- type: GettingStarted
+  url: https://docs.reltio.com/en/developer-resources
+- type: Support
+  url: https://support.reltio.com/hc/en-us
+- type: HelpCenter
+  url: https://community.reltio.com/home
+- type: Blog
+  url: https://www.reltio.com/resources/?_resource_types=blog
+- type: GitHubOrganization
+  url: https://github.com/reltio-ai
+- type: SignUp
+  url: https://www.reltio.com/request-a-demo/
+- type: Login
+  url: https://login.reltio.com
+- type: TermsOfService
+  url: https://www.reltio.com/reltio-website-terms/
+- type: PrivacyPolicy
+  url: https://www.reltio.com/privacy-policy/
+- type: StatusPage
+  url: https://status.reltio.com/
+- type: MCPServer
+  name: Reltio AgentFlow + Developer MCP Server
+  url: mcp/reltio-mcp.yml
+- type: Packages
+  url: packages/reltio-packages.yml
+- type: SDKs
+  url: packages/reltio-packages.yml
+- type: Authentication
+  url: authentication/reltio-authentication.yml
+- type: Conventions
+  url: conventions/reltio-conventions.yml
+- type: Lifecycle
+  url: lifecycle/reltio-lifecycle.yml
+- type: ChangeLog
+  url: changelog/reltio-changelog.yml
+- type: ChangeLog
+  name: Reltio Release Notes
+  url: https://docs.reltio.com/en/whats-new/release-notes
+- type: Conformance
+  url: conformance/reltio-conformance.yml
+- type: Compliance
+  url: https://www.reltio.com/trust/
+- type: TrustCenter
+  url: security/reltio-trust-center.yml
+- type: DomainSecurity
+  url: security/reltio-domain-security.yml
+- type: WellKnown
+  url: well-known/reltio-well-known.yml
+- type: LLMsTxt
+  url: llms/reltio-llms.txt
+- type: AgentSkill
+  name: Reltio MCP agent skills
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1

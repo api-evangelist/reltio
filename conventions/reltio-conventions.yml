@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reltio.com/en/developer-resources
+notes: >-
+  Cross-cutting semantics for the Reltio Context Intelligence Platform REST
+  APIs, captured from the developer documentation. Reltio does not document a
+  request idempotency-key contract, so no Idempotency pointer is emitted.
+authentication:
+  style: oauth2-bearer
+  detail: OAuth 2.0 access token passed as Authorization; Bearer <token>. See authentication/reltio-authentication.yml
+base_url:
+  pattern: https://<environment>.reltio.com/reltio/api/<tenantId>
+  detail: >-
+    The API host is the customer's assigned environment (e.g. dev.reltio.com,
+    361.reltio.com); the tenant id is a path segment. Data-model, match, and
+    activity resources hang off this base.
+resource_families:
+- Entity Management (entities)
+- Relation Management (relations)
+- Interaction Management (interactions)
+- Reference Data Management (lookups, source systems, transcoding, generators)
+- Load and Export
+- Data Integration
+- Workflow (tasks, process instances)
+- System Administration
+- Statistics Reporting Services
+- Data Validation
+- Hierarchy Management
+pagination:
+  style: offset-limit
+  params: [offset, max]
+  detail: >-
+    Collection endpoints page with offset (starting record) and max (page size)
+    query parameters.
+filtering:
+  style: reltio-filter-dsl
+  detail: >-
+    Search endpoints accept a `filter` expression using Reltio's filter grammar
+    (equals(), startsWith(), fuzzy(), containsWordStartingWith(), and(), or()).
+versioning:
+  scheme: uri-path
+  detail: API paths are namespaced under /reltio/api; platform features are versioned via release notes rather than a URL version segment.
+error_envelope:
+  style: json
+  detail: Errors return a JSON body with HTTP status codes; the platform does not publish an RFC 9457 problem+json contract.
+cross_links:
+  authentication: authentication/reltio-authentication.yml
+  lifecycle: lifecycle/reltio-lifecycle.yml

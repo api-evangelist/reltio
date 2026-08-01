@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reltio.com/en/whats-new/release-notes
+scheme: rolling-release-notes
+detail: >-
+  Reltio publishes dated release notes for the Context Intelligence Platform in
+  its documentation. Reltio delivers changes as a continuously updated SaaS;
+  the live release-notes page is the source of truth. Individual dated entries
+  were not transcribed to avoid fabrication — consult the release-notes URL for
+  the current window.
+release_notes_url: https://docs.reltio.com/en/whats-new/release-notes
+context_note: >-
+  As of May 7, 2026, Reltio is part of SAP SE and is being integrated into SAP
+  Business Data Cloud; the Reltio portfolio remains available standalone.
+entries: []

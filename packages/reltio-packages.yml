@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/reltio-ai
+notes: >-
+  Reltio does not publish a general-purpose REST client SDK to npm/PyPI/Maven
+  Central under a public first-party namespace. Its first-party open-source
+  developer artifacts live in the reltio-ai GitHub organization: the MCP server
+  and sample client (Python) and the Workflow SDK (Java). Listed as
+  source-distributed packages (installed from source, not a public registry).
+packages:
+- language: python
+  registry: github
+  name: reltio-mcp-server
+  url: https://github.com/reltio-ai/reltio-mcp-server
+  install: git clone https://github.com/reltio-ai/reltio-mcp-server
+  license: Apache-2.0
+  official: true
+  kind: mcp-server
+- language: python
+  registry: github
+  name: reltio-mcp-strands-client
+  url: https://github.com/reltio-ai/reltio-mcp-strands-client
+  install: git clone https://github.com/reltio-ai/reltio-mcp-strands-client
+  official: true
+  kind: sample-client
+- language: java
+  registry: github
+  name: workflow
+  url: https://github.com/reltio-ai/workflow
+  install: git clone https://github.com/reltio-ai/workflow
+  official: true
+  kind: workflow-sdk
+  description: Source code of the Reltio Workflow SDK

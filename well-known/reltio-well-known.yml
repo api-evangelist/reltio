@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of Reltio environment + marketing hosts
+notes: >-
+  Reltio API environment hosts (e.g. dev.reltio.com, 361.reltio.com) are
+  per-tenant and require authentication (401) for most .well-known paths.
+  The oauth-authorization-server document is served unauthenticated and
+  advertises the Reltio AI Tools (AgentFlow MCP) OAuth server.
+hosts:
+- host: https://dev.reltio.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: reltio-oauth-authorization-server.json
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401
+- host: https://361.reltio.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+  - path: /.well-known/security.txt
+    status: 401
+- host: https://auth.reltio.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://www.reltio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/reltio-llms.txt

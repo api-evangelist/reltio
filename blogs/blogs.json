@@ -1,0 +1,14 @@
+{
+  "repo": "reltio",
+  "feeds": [
+    {
+      "source": "https://community.reltio.com/home",
+      "feed_url": "https://community.reltio.com/home",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}
