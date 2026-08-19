@@ -2,14 +2,11 @@ generated: '2026-07-21'
 method: searched
 status: published
 source: https://docs.reltio.com/en/developer-resources/ai-integrations
-notes: >-
-  Reltio ships two Model Context Protocol servers. (1) The Reltio AgentFlow
-  MCP Server — a fully-managed, hosted SaaS MCP gateway exposed per environment
-  at https://<env>.reltio.com/ai/tools/mcp (OAuth 2.0, dynamic client
-  registration + PKCE via login.reltio.com). (2) The Reltio MCP Server —
-  Developer Edition — an open-source, self-hosted Apache-2.0 Python server
-  (github.com/reltio-ai/reltio-mcp-server) that runs over HTTP/SSE and
-  authenticates to the Reltio platform with OAuth 2.0 client credentials.
+notes: Reltio ships two Model Context Protocol servers. (1) The Reltio AgentFlow MCP Server — a fully-managed,
+  hosted SaaS MCP gateway exposed per environment at https://<env>.reltio.com/ai/tools/mcp (OAuth 2.0,
+  dynamic client registration + PKCE via login.reltio.com). (2) The Reltio MCP Server — Developer Edition
+  — an open-source, self-hosted Apache-2.0 Python server (github.com/reltio-ai/reltio-mcp-server) that
+  runs over HTTP/SSE and authenticates to the Reltio platform with OAuth 2.0 client credentials.
 servers:
 - name: reltio-agentflow-mcp
   edition: AgentFlow MCP Server (managed SaaS)
@@ -22,9 +19,12 @@ servers:
     authorization_endpoint: https://login.reltio.com
     token_endpoint: https://login.reltio.com/token
     registration_endpoint: https://dev.reltio.com/ai/tools/register
-    grant_types: [authorization_code]
-    code_challenge_methods: [S256]
-    token_endpoint_auth_methods: [client_secret_basic]
+    grant_types:
+    - authorization_code
+    code_challenge_methods:
+    - S256
+    token_endpoint_auth_methods:
+    - client_secret_basic
   evidence: dev.reltio.com/.well-known/oauth-authorization-server (HTTP 200)
 - name: reltio-mcp-server-developer
   edition: Developer Edition (open source, self-hosted)
@@ -35,55 +35,111 @@ servers:
   default_endpoint: http://localhost:8000/sse
   auth:
     type: oauth2
-    grant_types: [client_credentials]
+    grant_types:
+    - client_credentials
   install: mcp install --with requests --with pyyaml main.py -f .env
 sample_clients:
 - name: reltio-mcp-strands-client
   repo: https://github.com/reltio-ai/reltio-mcp-strands-client
-  description: Sample Python client connecting Strands AI agents to the Reltio AgentFlow MCP Server (OAuth 2.0)
+  description: Sample Python client connecting Strands AI agents to the Reltio AgentFlow MCP Server (OAuth
+    2.0)
 tools:
-- {name: search_entities_tool, description: Search for entities with advanced filtering}
-- {name: get_entity_tool, description: Get detailed information about a Reltio entity by ID}
-- {name: update_entity_attributes_tool, description: Update specific attributes of an entity in Reltio}
-- {name: get_entity_match_history_tool, description: Find the match history for a specific entity}
-- {name: get_relation_details_tool, description: Get detailed information about a Reltio relation by ID}
-- {name: merge_entities_tool, description: Merge multiple entities in Reltio}
-- {name: reject_entity_match_tool, description: Mark an entity as not a match (reject the potential duplicate)}
-- {name: export_merge_tree_tool, description: Export the merge tree for all entities in a specific tenant}
-- {name: get_business_configuration_tool, description: Get the business configuration for a specific tenant}
-- {name: get_tenant_permissions_metadata_tool, description: Get the permissions and security metadata for a specific tenant}
-- {name: get_merge_activities_tool, description: Retrieve activity events related to entity merges with flexible filtering}
-- {name: get_tenant_metadata_tool, description: Get tenant metadata details from the business configuration}
-- {name: get_data_model_definition_tool, description: Get complete details about the data model definition}
-- {name: get_entity_type_definition_tool, description: Get the entity type definition for a specified entity type}
-- {name: get_change_request_type_definition_tool, description: Get the change request type definition}
-- {name: get_relation_type_definition_tool, description: Get the relation type definition}
-- {name: get_interaction_type_definition_tool, description: Get the interaction type definition}
-- {name: get_graph_type_definition_tool, description: Get the graph type definition}
-- {name: get_grouping_type_definition_tool, description: Get the grouping type definition}
-- {name: find_potential_matches_tool, description: Find all potential matches by match rule, score range, or confidence level}
-- {name: get_potential_matches_stats_tool, description: Get counts of potential matches in the tenant}
-- {name: get_entity_with_matches_tool, description: Get an entity along with its potential matches}
-- {name: create_entity_tool, description: Create one or more entities in a Reltio tenant}
-- {name: get_entity_graph_tool, description: Get entity graph (hops) with filtering and traversal options}
-- {name: get_entity_parents_tool, description: Find all parent paths for a given entity across graph types}
-- {name: create_relationships_tool, description: Create relationships between entities in Reltio}
-- {name: delete_relation_tool, description: Delete a relation object from a tenant}
-- {name: get_entity_relations_tool, description: Get entity connections/relations using the connections API}
-- {name: relation_search_tool, description: Search for relationships in a tenant using the Relation Search API}
-- {name: check_user_activity_tool, description: Check if a user has been active within a specified number of days}
-- {name: get_entity_interactions_tool, description: Get interactions for a Reltio entity by ID}
-- {name: create_interaction_tool, description: Create interactions in the Reltio Platform}
-- {name: rdm_lookups_list_tool, description: List lookups based on the given RDM lookup type}
-- {name: get_users_by_role_and_tenant_tool, description: Get users by role and tenant}
-- {name: get_users_by_group_and_tenant_tool, description: Get users by group and tenant}
-- {name: get_user_workflow_tasks_tool, description: Get workflow tasks for a specific user}
-- {name: reassign_workflow_task_tool, description: Reassign a workflow task to a different user}
-- {name: get_possible_assignees_tool, description: Get possible assignees for specific tasks}
-- {name: retrieve_tasks_tool, description: Retrieve workflow tasks with comprehensive filtering}
-- {name: get_task_details_tool, description: Get complete details of a specific workflow task by ID}
-- {name: start_process_instance_tool, description: Start a process instance in Reltio workflow}
-- {name: execute_task_action_tool, description: Execute an action on a workflow task}
-- {name: unmerge_entity_tool, description: Unmerge a contributor entity from a merged entity}
-- {name: health_check_tool, description: Check if the MCP server is healthy}
-- {name: capabilities_tool, description: Display help information about available tools}
+- name: search_entities_tool
+  description: Search for entities with advanced filtering
+- name: get_entity_tool
+  description: Get detailed information about a Reltio entity by ID
+- name: update_entity_attributes_tool
+  description: Update specific attributes of an entity in Reltio
+- name: get_entity_match_history_tool
+  description: Find the match history for a specific entity
+- name: get_relation_details_tool
+  description: Get detailed information about a Reltio relation by ID
+- name: merge_entities_tool
+  description: Merge multiple entities in Reltio
+- name: reject_entity_match_tool
+  description: Mark an entity as not a match (reject the potential duplicate)
+- name: export_merge_tree_tool
+  description: Export the merge tree for all entities in a specific tenant
+- name: get_business_configuration_tool
+  description: Get the business configuration for a specific tenant
+- name: get_tenant_permissions_metadata_tool
+  description: Get the permissions and security metadata for a specific tenant
+- name: get_merge_activities_tool
+  description: Retrieve activity events related to entity merges with flexible filtering
+- name: get_tenant_metadata_tool
+  description: Get tenant metadata details from the business configuration
+- name: get_data_model_definition_tool
+  description: Get complete details about the data model definition
+- name: get_entity_type_definition_tool
+  description: Get the entity type definition for a specified entity type
+- name: get_change_request_type_definition_tool
+  description: Get the change request type definition
+- name: get_relation_type_definition_tool
+  description: Get the relation type definition
+- name: get_interaction_type_definition_tool
+  description: Get the interaction type definition
+- name: get_graph_type_definition_tool
+  description: Get the graph type definition
+- name: get_grouping_type_definition_tool
+  description: Get the grouping type definition
+- name: find_potential_matches_tool
+  description: Find all potential matches by match rule
+  score range: null
+  or confidence level: null
+- name: get_potential_matches_stats_tool
+  description: Get counts of potential matches in the tenant
+- name: get_entity_with_matches_tool
+  description: Get an entity along with its potential matches
+- name: create_entity_tool
+  description: Create one or more entities in a Reltio tenant
+- name: get_entity_graph_tool
+  description: Get entity graph (hops) with filtering and traversal options
+- name: get_entity_parents_tool
+  description: Find all parent paths for a given entity across graph types
+- name: create_relationships_tool
+  description: Create relationships between entities in Reltio
+- name: delete_relation_tool
+  description: Delete a relation object from a tenant
+- name: get_entity_relations_tool
+  description: Get entity connections/relations using the connections API
+- name: relation_search_tool
+  description: Search for relationships in a tenant using the Relation Search API
+- name: check_user_activity_tool
+  description: Check if a user has been active within a specified number of days
+- name: get_entity_interactions_tool
+  description: Get interactions for a Reltio entity by ID
+- name: create_interaction_tool
+  description: Create interactions in the Reltio Platform
+- name: rdm_lookups_list_tool
+  description: List lookups based on the given RDM lookup type
+- name: get_users_by_role_and_tenant_tool
+  description: Get users by role and tenant
+- name: get_users_by_group_and_tenant_tool
+  description: Get users by group and tenant
+- name: get_user_workflow_tasks_tool
+  description: Get workflow tasks for a specific user
+- name: reassign_workflow_task_tool
+  description: Reassign a workflow task to a different user
+- name: get_possible_assignees_tool
+  description: Get possible assignees for specific tasks
+- name: retrieve_tasks_tool
+  description: Retrieve workflow tasks with comprehensive filtering
+- name: get_task_details_tool
+  description: Get complete details of a specific workflow task by ID
+- name: start_process_instance_tool
+  description: Start a process instance in Reltio workflow
+- name: execute_task_action_tool
+  description: Execute an action on a workflow task
+- name: unmerge_entity_tool
+  description: Unmerge a contributor entity from a merged entity
+- name: health_check_tool
+  description: Check if the MCP server is healthy
+- name: capabilities_tool
+  description: Display help information about available tools
+deployment:
+  mode: remote
+  endpoint: https://dev.reltio.com/ai/tools/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
