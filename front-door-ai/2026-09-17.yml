@@ -1,0 +1,33 @@
+# Front Door AI Index — reltio — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: reltio
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.reltio.com
+  final_host: www.reltio.com
+  ownership: own
+  owner: reltio
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 58
+  host_score: 58
+  density: 37.54
+  words: 1545
+  tiers:
+    agentic: 20
+    core: 37
+    model: 1
+  ambiguous: 29
+  top_terms:
+    AI: 36
+    intelligence: 15
+    agentic: 13
+    agent: 11
+    AI agent: 6
+    automation: 3
+    GPT: 1
+    LLMs: 1
+    autonomous agent: 1
